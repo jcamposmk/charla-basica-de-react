@@ -33,7 +33,7 @@ export const List = ({ tasks, previewsTasks }) => {
         <div className="col-sm-4">
           <PreviousTree previewsTasks={previewsTasks} />
         </div>
-        <div className="col-sm-8 p-2">
+        <div className="col-sm-8">
           <CurrentTree
             tasks={tasks}
             withKey={withKey}
@@ -65,6 +65,7 @@ const ListItem = ({ task }) => {
 const PreviousTree = ({ previewsTasks }) => (
   <>
     <i className="text-primary">Subárbol anterior</i>
+    <h4>-------</h4>
     <ul aria-label="previous tree">
       {previewsTasks.map((previewTask) => (
         <li className="border p-1 mb-1">
